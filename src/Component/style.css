@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* container */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(209, 208, 217, 1);
+  /* border: 2px solid green; */
+  padding: 10px;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 720px;
+  background: rgba(245, 245, 245, 1);
+  margin: 50px auto 20px;
+  padding: 50px 100px 50px;
+  border-radius: 15px;
+}
+
+.todo-app h2 {
+  display: flex;
+  align-items: center; 
+  font-weight: 500;
+}
+
+.todo-app h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+/* input box */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+input {
+  position: relative;
+  flex: 1;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 10px;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #e07c7c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+button:hover {
+  background: #312d2d;
+}
+
+/* styling on mid */
+.mid {
+  display: flex;
+  font-size: 1.2rem;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  /* justify-content: space-between; */
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  background: rgba(224, 124, 124, 1);
+  border-radius: 10px;
+  padding: 20px 20px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+progress#progress-bar {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.progress label {
+  font-size: 28px;
+  font-weight: 500;
+}
+span#c-count {
+  margin-right: 5px;
+}
+
+/* styling on todo list */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid #e5e5e5; */
+}
+
+ul li {
+  padding: 10px;
+  background: #fff;
+  border-radius: 25px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+  align-items: center;
+}
+
+ul li:hover {
+  background: lightyellow;
+}
+#list input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+#list label {
+  position: relative;
+  cursor: pointer;
+}
+
+#list label:before {
+  content: "";
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid rgba(88, 82, 146, 1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+#list input:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+#list input:checked + label:before {
+  background: rgba(88, 82, 146, 1);
+}
+#list input:checked + label {
+  text-decoration: line-through;
+  color: rgba(188, 188, 188, 1);
+}
+.delete {
+  height: 25px;
+  padding: 5px 0px;
+  border-radius: 3px;
+}
+.delete:hover {
+  background: #f2f2f2;
+  cursor: pointer;
+}
+
+.edit {
+  height: 25px;
+  padding: 5px 0px;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.edit:hover {
+  background: #f2f2f2;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+}
+.add-task {
+  width: 100%;
+  outline: none;
+  font-size: 15px;
+  padding: 11px;
+  border: 0;
+  margin-bottom: 3px;
+}
+
+#total-tasks {
+  margin-bottom: 20px;
+  font-size: 13px;
+  margin-left: 2px;
+  color: gray;
+}
+.top-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+/*
+dropdown*/
+.dropbtn {
+  background-color: #fff;
+  color: #000;
+  padding: 6px 20px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: left;
+  width: 100px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  font-size: 13px;
+  border-radius: 10px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 6px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(88, 82, 146, 1);
+  color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 767px){
+  .todo-app{
+    padding: 50px 20px 50px;
+  }
+}
