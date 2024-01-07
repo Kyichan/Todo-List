@@ -61,7 +61,7 @@ const TodoList = () => {
         }
       );    
       
-      const addedTask = await response.json();
+      // const addedTask = await response.json();
 
       setTasks((prevTasks) => [...prevTasks, newTask]);
       setInputValue("");
